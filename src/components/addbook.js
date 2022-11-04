@@ -12,7 +12,7 @@ const Add = (props) => {
       ...inputBook,
       [e.target.name]: e.target.value,
     });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,12 +20,12 @@ const Add = (props) => {
     if (inputBook.title.trim() && inputBook.author.trim()) {
       handleBooks(inputBook.title, inputBook.author);
     }
-  }
+  };
 
   return (
     <div>
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           className="input-text"
@@ -46,10 +46,10 @@ const Add = (props) => {
       </form>
     </div>
   );
-}
+};
 
 Add.propTypes = {
   handleBooks: PropTypes.func.isRequired,
-}
+};
 
 export default Add;

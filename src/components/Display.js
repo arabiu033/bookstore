@@ -5,10 +5,10 @@ import Book from './book';
 const Display = (props) => {
   const { books, delBooks } = props;
 
-  return(
+  return (
     <ul>
       {books.map((book) => (
-        <Book book={book} delBooks={delBooks} />
+        <Book book={book} delBooks={delBooks} key={book.id} />
       ))}
     </ul>
   );

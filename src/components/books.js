@@ -11,20 +11,20 @@ const Books = () => {
       id: uuidv4(),
       title,
       author,
-    }
+    };
     setBooks([...books, newBook]);
-  }
+  };
 
   const delBooks = (title) => {
     setBooks([...books.filter((book) => book.title !== title)]);
-  }
+  };
 
-  return(
+  return (
     <div>
       <Display books={books} delBooks={delBooks} />
       <Add handleBooks={handleBooks} />
     </div>
-  )
-}
+  );
+};
 
 export default Books;
