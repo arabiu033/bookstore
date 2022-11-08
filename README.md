@@ -35,7 +35,7 @@ git clone https://github.com/arabiu033/bookstore.git
 ```
 3. To access cloned directory run:
 ```bash
-cd maths
+cd bookstore
 ```
 3. Open it with the live server
 
