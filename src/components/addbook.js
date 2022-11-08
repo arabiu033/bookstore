@@ -1,11 +1,16 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { add } from '../redux/books/book';
 
-const Add = (props) => {
+const Add = () => {
   const [inputBook, setInputText] = useState({
     title: '',
     author: '',
   });
+
+  const dispatch = useDispatch();
+  const getBook = (title, author) => ({ id: uuidv4(), title, author });
 
   const onChange = (e) => {
     setInputText({
@@ -16,9 +21,13 @@ const Add = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { handleBooks } = props;
+
     if (inputBook.title.trim() && inputBook.author.trim()) {
-      handleBooks(inputBook.title, inputBook.author);
+      dispatch(add(getBook(inputBook.title, inputBook.author)));
+      setInputText({
+        title: '',
+        author: '',
+      });
     }
   };
 
@@ -46,10 +55,6 @@ const Add = (props) => {
       </form>
     </div>
   );
-};
-
-Add.propTypes = {
-  handleBooks: PropTypes.func.isRequired,
 };
 
 export default Add;
