@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Display from './Display';
 import Add from './addbook';
+import { fetchBooks } from '../redux/books/book';
 
-const Books = () => (
-  <div>
-    <Display />
-    <Add />
-  </div>
-);
+const Books = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+  return (
+    <div>
+      <Display />
+      <Add />
+    </div>
+  );
+};
 
 export default Books;
