@@ -26,6 +26,7 @@ export const fetchBooks = createAsyncThunk('fetchbooks/get', async (_, thunkApi)
         payload: Object.entries(res.data).map(([k, v]) => ({ item_id: k, ...v[0] })),
       });
     }
+    return Promise.resolve(res.data);
   } catch (err) {
     return Promise.reject(err);
   }
