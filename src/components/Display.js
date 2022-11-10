@@ -7,7 +7,7 @@ const Display = () => {
   return (
     <ul>
       {books.map((book) => (
-        <Book book={book} key={book.id} />
+        <Book book={book} key={book.item_id} />
       ))}
     </ul>
   );
