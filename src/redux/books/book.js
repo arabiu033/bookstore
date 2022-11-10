@@ -27,7 +27,7 @@ export const fetchBooks = createAsyncThunk('fetchbooks/get', async (_, thunkApi)
       });
     }
   } catch (err) {
-    Promise.reject(err);
+    return Promise.reject(err);
   }
 });
 
@@ -47,7 +47,7 @@ export const remove = (payload) => async (dispatch) => {
     const res = await api.remove(payload);
 
     dispatch({ type: REMOVE, payload });
-    return Promise.resolve(res.date);
+    return Promise.resolve(res.data);
   } catch (err) {
     return Promise.reject(err);
   }

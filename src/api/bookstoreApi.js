@@ -21,5 +21,4 @@ const api = {
   remove,
 };
 
-// console.log(getAll());
 export default api;
