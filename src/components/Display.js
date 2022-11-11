@@ -6,8 +6,6 @@ const Display = () => {
   const books = useSelector((state) => state.books);
   const index = 0;
   const inputs = [
-    { categories: 'Action', percentage: '64%', ch: 'Chapter 17' },
-    { categories: 'Science Fiction', percentage: '8%', ch: 'Chapter 3: "A Lesson Learned"' },
     { categories: 'Economy', percentage: '0%', ch: 'Introduction' },
   ];
   return (

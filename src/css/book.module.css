@@ -24,7 +24,6 @@
 }
 
 .author {
-  font-family: "Roboto Slab", serif;
   font-weight: 300;
   color: #4386bf;
 }
@@ -99,6 +98,7 @@
   font-weight: 300;
   color: var(--black-two);
   font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .chaptersNumbers {
