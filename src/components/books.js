@@ -9,8 +9,7 @@ const Books = () => {
 
   useEffect(() => {
     dispatch(fetchBooks());
-    // eslint-disable-next-line
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
