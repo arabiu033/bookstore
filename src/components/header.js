@@ -1,13 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from '../css/header.module.css';
+
+const imgg = require('../css/ico.png');
 
 const Header = () => (
-  <div className="container">
-    <h1>Bookstore CMS</h1>
-    <ul>
-      <li><span><NavLink to="/">BOOKS</NavLink></span></li>
-      <li><span><NavLink to="/categories">CATEGORIES</NavLink></span></li>
-    </ul>
+  <div className={styles.panel}>
+    <span className={styles.cms}>Bookstore CMS</span>
+    <span><NavLink to="/" className={styles.books}>BOOKS</NavLink></span>
+    <span><NavLink to="/categories" className={styles.categories}>CATEGORIES</NavLink></span>
+    <button type="button" className={styles.oval}>
+      <img src={imgg} alt="icon" />
+    </button>
   </div>
 );
 
