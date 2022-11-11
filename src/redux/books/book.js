@@ -28,39 +28,22 @@ export default (state = initialState, action) => {
 };
 
 export const fetchBooks = createAsyncThunk('fetchbooks/get', async (_, thunkApi) => {
-  try {
-    const res = await api.getAll();
+  const res = await api.getAll();
 
-    if (res.data) {
-      thunkApi.dispatch({
-        type: FETCH,
-        payload: Object.entries(res.data).map(([k, v]) => ({ item_id: k, ...v[0] })),
-      });
-    }
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
+  if (res.data) {
+    thunkApi.dispatch({
+      type: FETCH,
+      payload: Object.entries(res.data).map(([k, v]) => ({ item_id: k, ...v[0] })),
+    });
   }
 });
 
 export const add = (payload) => async (dispatch) => {
-  try {
-    const res = await api.update(payload);
-
-    dispatch({ type: ADD, payload });
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
-  }
+  await api.update(payload);
+  dispatch({ type: ADD, payload });
 };
 
 export const remove = (payload) => async (dispatch) => {
-  try {
-    const res = await api.remove(payload);
-
-    dispatch({ type: REMOVE, payload });
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
-  }
+  await api.remove(payload);
+  dispatch({ type: REMOVE, payload });
 };
