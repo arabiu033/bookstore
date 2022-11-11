@@ -6,9 +6,11 @@ import { fetchBooks } from '../redux/books/book';
 
 const Books = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchBooks());
-  }, [dispatch]);
+  });
+
   return (
     <div>
       <Display />

@@ -4,15 +4,15 @@ const http = axios.create({
   baseURL: 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi',
 });
 
-const ID = 'fKexWRx5HrkWwPJlCVaZ';
+// const ID = 'fKexWRx5HrkWwPJlCVaZ';
 
 const create = () => http.post('/apps/');
 
 const update = (book) => http.post('/apps/fKexWRx5HrkWwPJlCVaZ/books', book);
 
-const getAll = (id = ID) => http.get(`/apps/${id}/books`);
+const getAll = () => http.get('/apps/fKexWRx5HrkWwPJlCVaZ/books');
 
-const remove = (bookId) => http.delete(`/apps/${ID}/books/${bookId}`);
+const remove = (bookId) => http.delete(`/apps/fKexWRx5HrkWwPJlCVaZ/books/${bookId}`);
 
 const api = {
   create,
