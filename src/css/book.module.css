@@ -68,7 +68,8 @@
   transform: rotate(45deg);
 }
 
-.pr1, .chapters {
+.pr1,
+.chapters {
   display: flex;
   flex-direction: column;
 }
