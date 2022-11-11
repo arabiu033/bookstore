@@ -29,7 +29,7 @@ const Book = (props) => {
         </div>
       </section>
 
-      <section className={styles.chapters}>
+      <section className={[styles.chapters]}>
         <span className={styles.currentChapters}>CURRENT CHAPTER</span>
         <p className={styles.chaptersNumbers}>{inputs.ch}</p>
         <button type="button" className={styles.update}>UPDATE PROGRESS</button>

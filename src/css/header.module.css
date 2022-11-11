@@ -2,9 +2,6 @@
   min-width: 80vw;
   padding: 1.438rem 4.188rem 1.688rem 4.25rem;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-bottom: 2px solid #e8e8e8;
 }
 
@@ -30,9 +27,6 @@
   padding: 0.875rem;
   border: solid 1px #e8e8e8;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-left: 48vw;
   cursor: pointer;
 }
@@ -41,4 +35,10 @@ img {
   width: 1.363rem;
   height: 1.363rem;
   background-color: #0290ff;
+}
+
+.oval, .panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
