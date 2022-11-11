@@ -29,10 +29,10 @@ const Book = (props) => {
         </div>
       </section>
 
-      <section>
-        <span>CURRENT CHAPTER</span>
-        <p>{inputs.ch}</p>
-        <button type="button">UPDATE PROGRESS</button>
+      <section className={styles.chapters}>
+        <span className={styles.currentChapters}>CURRENT CHAPTER</span>
+        <p className={styles.chaptersNumbers}>{inputs.ch}</p>
+        <button type="button" className={styles.update}>UPDATE PROGRESS</button>
       </section>
     </li>
   );

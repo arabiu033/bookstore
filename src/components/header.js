@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../css/header.module.css';
 
-const imgg = require('../css/ico.png');
+const imgg = require('../assets/ico.png');
 
 const Header = () => (
   <div className={styles.panel}>

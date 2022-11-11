@@ -11,15 +11,15 @@
   background-color: #0290ff;
   border-radius: 3px;
   padding: 8px 24px;
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #fff;
   border: none;
 }
 
 h2 {
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   font-size: 2rem;
   letter-spacing: -0.2px;
   color: var(--black-two);

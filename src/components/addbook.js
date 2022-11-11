@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { add } from '../redux/books/book';
+import styles from '../css/addBook.module.css';
 
 const Add = () => {
   const [inputBook, setInputText] = useState({
@@ -34,8 +35,9 @@ const Add = () => {
   };
 
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
+    <div className={styles.container}>
+      <div className={styles.line} />
+      <h2 className={styles.header}>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -53,7 +55,7 @@ const Add = () => {
           name="author"
           onChange={onChange}
         />
-        <button className="input-submit" type="submit">ADD BOOK</button>
+        <button className={styles.addButton} type="submit">ADD BOOK</button>
       </form>
     </div>
   );
